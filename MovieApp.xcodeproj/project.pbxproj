@@ -56,8 +56,63 @@
 				C0C7E6DCAE3A7C18A9B1AE72 /* Pods-MovieApp.debug.xcconfig */,
 				49F97E650576A7D79BAF9522 /* Pods-MovieApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		E40651342914DBF6003B1B74 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E4380B3D29104CF000F63C03 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E40651352914DC04003B1B74 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E40651362914DC0C003B1B74 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E40651372914DC21003B1B74 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				E4380B4729104CF000F63C03 /* Info.plist */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		E40651382914DC28003B1B74 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E4380B4229104CF000F63C03 /* Assets.xcassets */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E40651392914DC91003B1B74 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				E4380B3F29104CF000F63C03 /* Main.storyboard */,
+				E4380B4429104CF000F63C03 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		E406513A2914DC9D003B1B74 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				E4380B3929104CF000F63C03 /* AppDelegate.swift */,
+				E4380B3B29104CF000F63C03 /* SceneDelegate.swift */,
+			);
+			path = AppDelegate;
 			sourceTree = "<group>";
 		};
 		E4380B2D29104CEF00F63C03 = {
@@ -81,13 +136,13 @@
 		E4380B3829104CF000F63C03 /* MovieApp */ = {
 			isa = PBXGroup;
 			children = (
-				E4380B3929104CF000F63C03 /* AppDelegate.swift */,
-				E4380B3B29104CF000F63C03 /* SceneDelegate.swift */,
-				E4380B3D29104CF000F63C03 /* ViewController.swift */,
-				E4380B3F29104CF000F63C03 /* Main.storyboard */,
-				E4380B4229104CF000F63C03 /* Assets.xcassets */,
-				E4380B4429104CF000F63C03 /* LaunchScreen.storyboard */,
-				E4380B4729104CF000F63C03 /* Info.plist */,
+				E406513A2914DC9D003B1B74 /* AppDelegate */,
+				E40651392914DC91003B1B74 /* Storyboard */,
+				E40651382914DC28003B1B74 /* Supporting Files */,
+				E40651372914DC21003B1B74 /* Utilities */,
+				E40651362914DC0C003B1B74 /* Model */,
+				E40651352914DC04003B1B74 /* View */,
+				E40651342914DBF6003B1B74 /* Controller */,
 			);
 			path = MovieApp;
 			sourceTree = "<group>";
