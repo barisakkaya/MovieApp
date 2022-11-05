@@ -16,6 +16,11 @@
 		E4380B4129104CF000F63C03 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4380B3F29104CF000F63C03 /* Main.storyboard */; };
 		E4380B4329104CF000F63C03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4380B4229104CF000F63C03 /* Assets.xcassets */; };
 		E4380B4629104CF000F63C03 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4380B4429104CF000F63C03 /* LaunchScreen.storyboard */; };
+		E4434DAC2916C2C9006C1638 /* MovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4434DAB2916C2C9006C1638 /* MovieViewController.swift */; };
+		E4434DAE2916C6E3006C1638 /* Connectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4434DAD2916C6E3006C1638 /* Connectivity.swift */; };
+		E4434DB12916D1D7006C1638 /* BannerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4434DB02916D1D7006C1638 /* BannerExtensions.swift */; };
+		E4434DB42916D25A006C1638 /* CRNotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4434DB32916D25A006C1638 /* CRNotificationView.swift */; };
+		E4434DB62916D296006C1638 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4434DB52916D296006C1638 /* UIColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +37,11 @@
 		E4380B4229104CF000F63C03 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E4380B4529104CF000F63C03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E4380B4729104CF000F63C03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E4434DAB2916C2C9006C1638 /* MovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewController.swift; sourceTree = "<group>"; };
+		E4434DAD2916C6E3006C1638 /* Connectivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connectivity.swift; sourceTree = "<group>"; };
+		E4434DB02916D1D7006C1638 /* BannerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerExtensions.swift; sourceTree = "<group>"; };
+		E4434DB32916D25A006C1638 /* CRNotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRNotificationView.swift; sourceTree = "<group>"; };
+		E4434DB52916D296006C1638 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +76,8 @@
 		E40651342914DBF6003B1B74 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				E4380B3D29104CF000F63C03 /* SplashViewController.swift */,
+				E4434DA82916C27F006C1638 /* Movies */,
+				E4434DA72916C276006C1638 /* Splash */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -74,6 +85,7 @@
 		E40651352914DC04003B1B74 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E4434DB22916D24E006C1638 /* Popup */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -88,6 +100,7 @@
 		E40651372914DC21003B1B74 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				E4434DAF2916D1C6006C1638 /* Extensions */,
 				E406513B2914DE95003B1B74 /* Singleton */,
 				E4380B4729104CF000F63C03 /* Info.plist */,
 				E406513E2914DFC5003B1B74 /* GoogleService-Info.plist */,
@@ -125,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				E406513C2914DEA2003B1B74 /* RCManager.swift */,
+				E4434DAD2916C6E3006C1638 /* Connectivity.swift */,
 			);
 			path = Singleton;
 			sourceTree = "<group>";
@@ -159,6 +173,39 @@
 				E40651342914DBF6003B1B74 /* Controller */,
 			);
 			path = MovieApp;
+			sourceTree = "<group>";
+		};
+		E4434DA72916C276006C1638 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				E4380B3D29104CF000F63C03 /* SplashViewController.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		E4434DA82916C27F006C1638 /* Movies */ = {
+			isa = PBXGroup;
+			children = (
+				E4434DAB2916C2C9006C1638 /* MovieViewController.swift */,
+			);
+			path = Movies;
+			sourceTree = "<group>";
+		};
+		E4434DAF2916D1C6006C1638 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E4434DB02916D1D7006C1638 /* BannerExtensions.swift */,
+				E4434DB52916D296006C1638 /* UIColor.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E4434DB22916D24E006C1638 /* Popup */ = {
+			isa = PBXGroup;
+			children = (
+				E4434DB32916D25A006C1638 /* CRNotificationView.swift */,
+			);
+			path = Popup;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -279,8 +326,13 @@
 			files = (
 				E4380B3E29104CF000F63C03 /* SplashViewController.swift in Sources */,
 				E4380B3A29104CF000F63C03 /* AppDelegate.swift in Sources */,
+				E4434DB42916D25A006C1638 /* CRNotificationView.swift in Sources */,
+				E4434DAE2916C6E3006C1638 /* Connectivity.swift in Sources */,
+				E4434DB62916D296006C1638 /* UIColor.swift in Sources */,
+				E4434DB12916D1D7006C1638 /* BannerExtensions.swift in Sources */,
 				E406513D2914DEA2003B1B74 /* RCManager.swift in Sources */,
 				E4380B3C29104CF000F63C03 /* SceneDelegate.swift in Sources */,
+				E4434DAC2916C2C9006C1638 /* MovieViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
