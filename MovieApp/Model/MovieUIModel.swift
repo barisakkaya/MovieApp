@@ -14,12 +14,4 @@ struct MovieUIModel: Codable {
     let imdbID: String
     let type: String
     let poster: String
-    
-    var posterImageView: UIImageView {
-        let imageView = UIImageView()
-        let url = URL(string: poster)
-        imageView.kf.setImage(with: url)
-        return imageView
-    }
-    
 }

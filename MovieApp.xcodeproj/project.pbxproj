@@ -28,6 +28,10 @@
 		E4C31A292917F9FC00DB0A46 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C31A282917F9FC00DB0A46 /* Movie.swift */; };
 		E4C31A2B2918084F00DB0A46 /* SharedExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C31A2A2918084F00DB0A46 /* SharedExtensions.swift */; };
 		E4C31A2D291816AA00DB0A46 /* ScreenNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C31A2C291816AA00DB0A46 /* ScreenNavigator.swift */; };
+		E4C31A3129181ADB00DB0A46 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C31A2F29181ADB00DB0A46 /* MovieCell.swift */; };
+		E4C31A3229181ADB00DB0A46 /* MovieCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4C31A3029181ADB00DB0A46 /* MovieCell.xib */; };
+		E4C31A36291824E200DB0A46 /* MovieDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C31A34291824E200DB0A46 /* MovieDetailsViewController.swift */; };
+		E4C31A37291824E200DB0A46 /* MovieDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4C31A35291824E200DB0A46 /* MovieDetailsViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +60,10 @@
 		E4C31A282917F9FC00DB0A46 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		E4C31A2A2918084F00DB0A46 /* SharedExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedExtensions.swift; sourceTree = "<group>"; };
 		E4C31A2C291816AA00DB0A46 /* ScreenNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenNavigator.swift; sourceTree = "<group>"; };
+		E4C31A2F29181ADB00DB0A46 /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
+		E4C31A3029181ADB00DB0A46 /* MovieCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieCell.xib; sourceTree = "<group>"; };
+		E4C31A34291824E200DB0A46 /* MovieDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewController.swift; sourceTree = "<group>"; };
+		E4C31A35291824E200DB0A46 /* MovieDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieDetailsViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +213,8 @@
 		E4434DA82916C27F006C1638 /* Movies */ = {
 			isa = PBXGroup;
 			children = (
+				E4C31A33291824BF00DB0A46 /* Movie Details */,
+				E4C31A2E29181AA600DB0A46 /* MovieCell */,
 				E4434DAB2916C2C9006C1638 /* MovieViewController.swift */,
 			);
 			path = Movies;
@@ -251,6 +261,24 @@
 				E4C31A1C2916F25600DB0A46 /* NetworkingConstants.swift */,
 			);
 			path = Shared;
+			sourceTree = "<group>";
+		};
+		E4C31A2E29181AA600DB0A46 /* MovieCell */ = {
+			isa = PBXGroup;
+			children = (
+				E4C31A2F29181ADB00DB0A46 /* MovieCell.swift */,
+				E4C31A3029181ADB00DB0A46 /* MovieCell.xib */,
+			);
+			path = MovieCell;
+			sourceTree = "<group>";
+		};
+		E4C31A33291824BF00DB0A46 /* Movie Details */ = {
+			isa = PBXGroup;
+			children = (
+				E4C31A34291824E200DB0A46 /* MovieDetailsViewController.swift */,
+				E4C31A35291824E200DB0A46 /* MovieDetailsViewController.xib */,
+			);
+			path = "Movie Details";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -317,6 +345,8 @@
 				E406513F2914DFC6003B1B74 /* GoogleService-Info.plist in Resources */,
 				E4380B4329104CF000F63C03 /* Assets.xcassets in Resources */,
 				E4380B4129104CF000F63C03 /* Main.storyboard in Resources */,
+				E4C31A37291824E200DB0A46 /* MovieDetailsViewController.xib in Resources */,
+				E4C31A3229181ADB00DB0A46 /* MovieCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,6 +400,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4C31A292917F9FC00DB0A46 /* Movie.swift in Sources */,
+				E4C31A3129181ADB00DB0A46 /* MovieCell.swift in Sources */,
+				E4C31A36291824E200DB0A46 /* MovieDetailsViewController.swift in Sources */,
 				E4380B3E29104CF000F63C03 /* SplashViewController.swift in Sources */,
 				E4C31A2B2918084F00DB0A46 /* SharedExtensions.swift in Sources */,
 				E4380B3A29104CF000F63C03 /* AppDelegate.swift in Sources */,

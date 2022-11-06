@@ -16,7 +16,9 @@ class MovieViewController: UIViewController {
     var present: MoviePresenter?
     var movieList: [MovieUIModel]? {
         didSet {
-            self.tableView.reloadData()
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
         }
     }
     static var storyboardId = "movieViewController"
@@ -24,6 +26,10 @@ class MovieViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configure()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        navigationItem.title = "Movie Page"
     }
     
     private func configure() {
@@ -125,20 +131,22 @@ extension MovieViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        //guard let cell = tableView.dequeueReusableCell(withIdentifier: "WeatherCell", for: indexPath) as? WeatherCell else { return UITableViewCell()}
-        //guard let previousSearches = previousSearches else { return UITableViewCell() }
-        //cell.selectionStyle = .none
-        //cell.configureCell(weatherResponse: previousSearches[indexPath.row])
-        return UITableViewCell()
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "MovieCell", for: indexPath) as? MovieCell, let movieList = movieList else {
+            return UITableViewCell()
+        }
+        cell.selectionStyle = .none
+        cell.configureCell(movieUIModel: movieList[indexPath.row])
+        return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        /*guard let previousSearches = previousSearches else { return }
-        guard let vc = WeatherScreenNavigator.shared.getWeatherDetailsScreen(weatherResponse: previousSearches[indexPath.row]) else { return }
-        navigationController?.pushViewController(vc, animated: true)*/
+        guard let movieList = movieList else { return }
+        guard let vc = ScreenNavigator.shared.getMovieDetailsScreen(movieUIModel: movieList[indexPath.row]) else { return }
+        navigationItem.title = ""
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 120.0
+        return 250
     }
 }

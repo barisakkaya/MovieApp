@@ -23,4 +23,12 @@ class ScreenNavigator {
         
         return vc
     }
+    
+    func getMovieDetailsScreen(movieUIModel: MovieUIModel?) -> MovieDetailsViewController?{
+        guard let movieUIModel = movieUIModel else { return nil }
+        let vc = MovieDetailsViewController()
+        vc.movieUIModel = movieUIModel
+        vc.navigationItem.title = "\(movieUIModel.type.uppercased()) Details"
+        return vc
+    }
 }
