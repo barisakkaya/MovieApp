@@ -7,6 +7,7 @@
 
 import UIKit
 import Kingfisher
+import FirebaseAnalytics
 
 class MovieDetailsViewController: UIViewController {
     
@@ -24,7 +25,10 @@ class MovieDetailsViewController: UIViewController {
     }
     
     private func configure() {
-        guard let movieUIModel = movieUIModel else { return }
+        guard let movieUIModel = movieUIModel else {
+            navigationController?.popViewController(animated: true)
+            return
+        }
         
         let url = URL(string: movieUIModel.poster)
         posterImageView.kf.setImage(with: url)
@@ -33,6 +37,18 @@ class MovieDetailsViewController: UIViewController {
         yearLabel.text = "Year: \(movieUIModel.year)"
         imdbLabel.text = "IMDB id: \(movieUIModel.imdbID)"
         nameLabel.text = movieUIModel.title
+        
+        logEvent(movieUIModel: movieUIModel)
+        
+    }
+    
+    private func logEvent(movieUIModel: MovieUIModel) {
+        Analytics.logEvent("movieDetailsPageOpened", parameters: [
+            "title": movieUIModel.title,
+            "year": movieUIModel.year,
+            "imdbId": movieUIModel.imdbID,
+            "type": movieUIModel.type
+        ])
     }
 
 }
