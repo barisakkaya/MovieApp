@@ -9,6 +9,7 @@ target 'MovieApp' do
   pod ‘Firebase’
   pod ‘Firebase/Analytics’
   pod ‘Firebase/RemoteConfig’
+  pod 'FirebaseMessaging'
   pod 'Kingfisher'
   pod 'lottie-ios', '~> 3.1.3'
   pod 'Sentry'
