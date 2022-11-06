@@ -26,6 +26,7 @@
 		E4C31A1F2916F27600DB0A46 /* MovieManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C31A1E2916F27600DB0A46 /* MovieManager.swift */; };
 		E4C31A232917EE7800DB0A46 /* MovieUIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C31A222917EE7800DB0A46 /* MovieUIModel.swift */; };
 		E4C31A292917F9FC00DB0A46 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C31A282917F9FC00DB0A46 /* Movie.swift */; };
+		E4C31A2B2918084F00DB0A46 /* SharedExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C31A2A2918084F00DB0A46 /* SharedExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		E4C31A1E2916F27600DB0A46 /* MovieManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieManager.swift; sourceTree = "<group>"; };
 		E4C31A222917EE7800DB0A46 /* MovieUIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieUIModel.swift; sourceTree = "<group>"; };
 		E4C31A282917F9FC00DB0A46 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		E4C31A2A2918084F00DB0A46 /* SharedExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,6 +212,7 @@
 			children = (
 				E4434DB02916D1D7006C1638 /* BannerExtensions.swift */,
 				E4434DB52916D296006C1638 /* UIColor.swift */,
+				E4C31A2A2918084F00DB0A46 /* SharedExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -365,6 +368,7 @@
 			files = (
 				E4C31A292917F9FC00DB0A46 /* Movie.swift in Sources */,
 				E4380B3E29104CF000F63C03 /* SplashViewController.swift in Sources */,
+				E4C31A2B2918084F00DB0A46 /* SharedExtensions.swift in Sources */,
 				E4380B3A29104CF000F63C03 /* AppDelegate.swift in Sources */,
 				E4434DB42916D25A006C1638 /* CRNotificationView.swift in Sources */,
 				E4C31A192916EBCB00DB0A46 /* MoviePresenter.swift in Sources */,
