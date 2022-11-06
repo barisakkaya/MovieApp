@@ -13,5 +13,8 @@ target 'MovieApp' do
   pod 'lottie-ios', '~> 3.1.3'
   pod 'Sentry'
   pod 'Firebase/Core', '~> 8.10 '
+  pod 'Alamofire'
+  pod 'BRYXBanner'
+
 
 end
