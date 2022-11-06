@@ -50,9 +50,10 @@ class SplashViewController: UIViewController, NotificationViewDelegate {
     private func navigateViewController() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
             RCManager.shared.delegate = nil
-            let vc = MovieViewController()
+            guard let vc = ScreenNavigator.shared.getMovieScreen() else { return }
             self.navigationItem.title = ""
             self.navigationController?.pushViewController(vc, animated: true)
+            
         }
     }
     

@@ -8,7 +8,8 @@
 import Foundation
 
 protocol MoviePresenterView: AnyObject {
-    func display(newData: String)
+    func display(newData: [MovieUIModel])
+    func showErrorMessage(message: String)
 }
 
 class MoviePresenter {
@@ -18,20 +19,23 @@ class MoviePresenter {
     init(view: MoviePresenterView) {
         self.view = view
         movieManager.delegate = self
-        fetchData()
     }
     
-    func fetchData() {
-        movieManager.fetchMovie(title: "Avengerszortgame")
+    func fetchData(title: String) {
+        movieManager.fetchMovie(title: title)
     }
 }
 
 extension MoviePresenter: MovieManagerDelegate {
+    func didFailFindMovie() {
+        view?.showErrorMessage(message: "Movie is not found")
+    }
+    
     func didFailWithError(error: Error) {
-        
+        view?.showErrorMessage(message: "Something went wrong!")
     }
     
     func didSuccess(movies: [MovieUIModel]) {
-        
+        view?.display(newData: movies)
     }
 }

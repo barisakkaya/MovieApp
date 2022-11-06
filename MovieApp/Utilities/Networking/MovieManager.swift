@@ -18,7 +18,8 @@ class MovieManager {
     var delegate: MovieManagerDelegate?
             
     func fetchMovie(title: String) {
-        let urlString = "\(NetworkingConstants.movieURL)&s=\(title)"
+        let formattedTitle = title.components(separatedBy: .whitespaces).joined(separator: "%20")
+        let urlString = "\(NetworkingConstants.movieURL)&s=\(formattedTitle)"
         performRequest(with: urlString)
     }
     

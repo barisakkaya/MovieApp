@@ -62,13 +62,80 @@
         <!--Movie View Controller-->
         <scene sceneID="KjG-XH-mif">
             <objects>
-                <viewController id="vLI-aX-ifk" customClass="MovieViewController" customModule="MovieApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="movieViewController" id="vLI-aX-ifk" customClass="MovieViewController" customModule="MovieApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="P4f-xg-6I4">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9li-rF-4hc" userLabel="Container View">
+                                <rect key="frame" x="0.0" y="47" width="390" height="76"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="fl4-Lp-8LJ">
+                                        <rect key="frame" x="93" y="24" width="204" height="40"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zAq-Ol-Naj">
+                                                <rect key="frame" x="0.0" y="0.0" width="152" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="LUE-ei-sRw"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iOW-nb-Vkv">
+                                                <rect key="frame" x="164" y="0.0" width="40" height="40"/>
+                                                <color key="backgroundColor" red="0.32156862749999998" green="0.32156862749999998" blue="0.40000000000000002" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="iOW-nb-Vkv" secondAttribute="height" multiplier="1:1" id="xza-0K-zAC"/>
+                                                </constraints>
+                                                <color key="tintColor" systemColor="systemBackgroundColor"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" image="magnifyingglass" catalog="system"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="12"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="searchButtonClicked:" destination="vLI-aX-ifk" eventType="touchUpInside" id="th0-pc-yI3"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="DXG-DN-4bi"/>
+                                            <constraint firstItem="iOW-nb-Vkv" firstAttribute="height" secondItem="zAq-Ol-Naj" secondAttribute="height" id="NOA-VR-qnj"/>
+                                            <constraint firstItem="zAq-Ol-Naj" firstAttribute="width" secondItem="fl4-Lp-8LJ" secondAttribute="width" multiplier="0.5" constant="50" id="WaZ-Nt-2Sf"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="fl4-Lp-8LJ" firstAttribute="top" secondItem="9li-rF-4hc" secondAttribute="top" constant="24" id="6RF-5D-biC"/>
+                                    <constraint firstAttribute="bottom" secondItem="fl4-Lp-8LJ" secondAttribute="bottom" constant="12" id="AJa-z5-afN"/>
+                                    <constraint firstItem="fl4-Lp-8LJ" firstAttribute="centerX" secondItem="9li-rF-4hc" secondAttribute="centerX" id="cZD-sw-lJh"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="pif-0Q-dX6">
+                                <rect key="frame" x="0.0" y="123" width="390" height="687"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="2ga-GU-Rj9"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="9li-rF-4hc" firstAttribute="leading" secondItem="2ga-GU-Rj9" secondAttribute="leading" id="3vO-WI-bf4"/>
+                            <constraint firstItem="2ga-GU-Rj9" firstAttribute="trailing" secondItem="9li-rF-4hc" secondAttribute="trailing" id="O9s-0H-Zch"/>
+                            <constraint firstItem="2ga-GU-Rj9" firstAttribute="trailing" secondItem="pif-0Q-dX6" secondAttribute="trailing" id="Rz0-cH-Q6A"/>
+                            <constraint firstItem="pif-0Q-dX6" firstAttribute="top" secondItem="9li-rF-4hc" secondAttribute="bottom" id="aHu-yO-aiO"/>
+                            <constraint firstItem="2ga-GU-Rj9" firstAttribute="bottom" secondItem="pif-0Q-dX6" secondAttribute="bottom" id="gCz-SJ-2lZ"/>
+                            <constraint firstItem="9li-rF-4hc" firstAttribute="top" secondItem="2ga-GU-Rj9" secondAttribute="top" id="iQM-lY-4GA"/>
+                            <constraint firstItem="pif-0Q-dX6" firstAttribute="leading" secondItem="2ga-GU-Rj9" secondAttribute="leading" id="mjH-pm-xDP"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="containerView" destination="9li-rF-4hc" id="BSd-mS-68b"/>
+                        <outlet property="searchField" destination="zAq-Ol-Naj" id="CCl-Ho-DlJ"/>
+                        <outlet property="tableView" destination="pif-0Q-dX6" id="Qqy-kf-HJR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3x3-FO-Gcf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -92,6 +159,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="magnifyingglass" catalog="system" width="128" height="117"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
