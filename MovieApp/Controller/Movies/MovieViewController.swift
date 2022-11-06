@@ -8,6 +8,8 @@
 import UIKit
 
 class MovieViewController: UIViewController {
+    
+    var present: MoviePresenter?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -15,6 +17,7 @@ class MovieViewController: UIViewController {
     }
     
     private func configure() {
+        present = MoviePresenter(view: self)
         configureNavBar()
         configureLayout()
     }
@@ -40,4 +43,10 @@ class MovieViewController: UIViewController {
         }
     }
 
+}
+
+extension MovieViewController: MoviePresenterView {
+    func display(newData: String) {
+        
+    }
 }

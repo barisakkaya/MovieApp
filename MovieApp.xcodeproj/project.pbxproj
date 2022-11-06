@@ -21,6 +21,11 @@
 		E4434DB12916D1D7006C1638 /* BannerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4434DB02916D1D7006C1638 /* BannerExtensions.swift */; };
 		E4434DB42916D25A006C1638 /* CRNotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4434DB32916D25A006C1638 /* CRNotificationView.swift */; };
 		E4434DB62916D296006C1638 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4434DB52916D296006C1638 /* UIColor.swift */; };
+		E4C31A192916EBCB00DB0A46 /* MoviePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C31A182916EBCB00DB0A46 /* MoviePresenter.swift */; };
+		E4C31A1D2916F25600DB0A46 /* NetworkingConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C31A1C2916F25600DB0A46 /* NetworkingConstants.swift */; };
+		E4C31A1F2916F27600DB0A46 /* MovieManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C31A1E2916F27600DB0A46 /* MovieManager.swift */; };
+		E4C31A232917EE7800DB0A46 /* MovieUIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C31A222917EE7800DB0A46 /* MovieUIModel.swift */; };
+		E4C31A292917F9FC00DB0A46 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C31A282917F9FC00DB0A46 /* Movie.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +47,11 @@
 		E4434DB02916D1D7006C1638 /* BannerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerExtensions.swift; sourceTree = "<group>"; };
 		E4434DB32916D25A006C1638 /* CRNotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRNotificationView.swift; sourceTree = "<group>"; };
 		E4434DB52916D296006C1638 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		E4C31A182916EBCB00DB0A46 /* MoviePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviePresenter.swift; sourceTree = "<group>"; };
+		E4C31A1C2916F25600DB0A46 /* NetworkingConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingConstants.swift; sourceTree = "<group>"; };
+		E4C31A1E2916F27600DB0A46 /* MovieManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieManager.swift; sourceTree = "<group>"; };
+		E4C31A222917EE7800DB0A46 /* MovieUIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieUIModel.swift; sourceTree = "<group>"; };
+		E4C31A282917F9FC00DB0A46 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +103,8 @@
 		E40651362914DC0C003B1B74 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E4C31A222917EE7800DB0A46 /* MovieUIModel.swift */,
+				E4C31A282917F9FC00DB0A46 /* Movie.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -100,6 +112,7 @@
 		E40651372914DC21003B1B74 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				E4C31A1A2916F23600DB0A46 /* Networking */,
 				E4434DAF2916D1C6006C1638 /* Extensions */,
 				E406513B2914DE95003B1B74 /* Singleton */,
 				E4380B4729104CF000F63C03 /* Info.plist */,
@@ -170,6 +183,7 @@
 				E40651372914DC21003B1B74 /* Utilities */,
 				E40651362914DC0C003B1B74 /* Model */,
 				E40651352914DC04003B1B74 /* View */,
+				E4C31A172916EB9300DB0A46 /* Presenter */,
 				E40651342914DBF6003B1B74 /* Controller */,
 			);
 			path = MovieApp;
@@ -206,6 +220,31 @@
 				E4434DB32916D25A006C1638 /* CRNotificationView.swift */,
 			);
 			path = Popup;
+			sourceTree = "<group>";
+		};
+		E4C31A172916EB9300DB0A46 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				E4C31A182916EBCB00DB0A46 /* MoviePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		E4C31A1A2916F23600DB0A46 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				E4C31A1B2916F24100DB0A46 /* Shared */,
+				E4C31A1E2916F27600DB0A46 /* MovieManager.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		E4C31A1B2916F24100DB0A46 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				E4C31A1C2916F25600DB0A46 /* NetworkingConstants.swift */,
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -324,14 +363,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4C31A292917F9FC00DB0A46 /* Movie.swift in Sources */,
 				E4380B3E29104CF000F63C03 /* SplashViewController.swift in Sources */,
 				E4380B3A29104CF000F63C03 /* AppDelegate.swift in Sources */,
 				E4434DB42916D25A006C1638 /* CRNotificationView.swift in Sources */,
+				E4C31A192916EBCB00DB0A46 /* MoviePresenter.swift in Sources */,
+				E4C31A1F2916F27600DB0A46 /* MovieManager.swift in Sources */,
+				E4C31A1D2916F25600DB0A46 /* NetworkingConstants.swift in Sources */,
 				E4434DAE2916C6E3006C1638 /* Connectivity.swift in Sources */,
 				E4434DB62916D296006C1638 /* UIColor.swift in Sources */,
 				E4434DB12916D1D7006C1638 /* BannerExtensions.swift in Sources */,
 				E406513D2914DEA2003B1B74 /* RCManager.swift in Sources */,
 				E4380B3C29104CF000F63C03 /* SceneDelegate.swift in Sources */,
+				E4C31A232917EE7800DB0A46 /* MovieUIModel.swift in Sources */,
 				E4434DAC2916C2C9006C1638 /* MovieViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
